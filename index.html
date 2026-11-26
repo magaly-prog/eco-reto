@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Reto</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <header>
+        <h1>♻️ ECO RETO RECICLANDO JUGANDO</h1>
+        <p>
+Transformando residuos en acciones sostenibles
+</p>
+    </header>
+
+    <!-- INICIO -->
+    <section class="tarjeta" id="pantallaInicio">
+
+        <div class="logo">🌳</div>
+
+        <h2>Bienvenido</h2>
+
+        <p>
+            Ayuda al planeta mientras ganas Eco Puntos
+        </p>
+
+        <button id="btnRegistro">
+            Registrarse
+        </button>
+
+        <button id="btnLogin">
+            Iniciar Sesión
+        </button>
+
+    </section>
+
+    <!-- REGISTRO -->
+     <img src="logo.jpeg" alt="Logo de Eco Reto" class="logo">
+    <section class="tarjeta oculto" id="pantallaRegistro">
+
+        <h2>Registro</h2>
+
+        <input
+            type="text"
+            id="nombre"
+            placeholder="Nombre Completo">
+
+        <input
+            type="text"
+            id="carrera"
+            placeholder="Carrera">
+
+        <input
+            type="text"
+            id="semestre"
+            placeholder="Semestre">
+
+        <input
+            type="email"
+            id="correo"
+            placeholder="Correo">
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Contraseña">
+
+        <button id="guardarUsuario">
+            Crear Cuenta
+        </button>
+
+    </section>
+
+    <!-- LOGIN -->
+    <section class="tarjeta oculto" id="pantallaLogin">
+
+        <h2>Iniciar Sesión</h2>
+
+        <input
+            type="email"
+            id="loginCorreo"
+            placeholder="Correo">
+
+        <input
+            type="password"
+            id="loginPassword"
+            placeholder="Contraseña">
+
+        <button id="entrarSistema">
+            Entrar
+        </button>
+
+    </section>
+
+    <!-- DASHBOARD -->
+    <section class="tarjeta oculto" id="dashboard">
+    
+    <h2>🌳 Panel Eco Reto</h2>
+
+    <h3 id="nombreUsuario"></h3>
+    <p id="carreraUsuario"></p>
+
+<p id="semestreUsuario"></p>
+
+    <div class="panel">
+
+        <div class="caja">
+            <h4>Eco Puntos</h4>
+            <p id="ecoPuntos">0</p>
+        </div>
+
+        <div class="caja">
+
+    <h4>Nivel</h4>
+
+    <p id="nivelUsuario">
+        Semilla 🌱
+    </p>
+
+</div>
+
+    </div>
+    <hr>
+    <h3>🌳 Árbol Virtual</h3>
+
+    <div id="arbolVirtual">
+        🌱
+    </div>
+    <div class="barra">
+
+    <div
+        id="progreso"
+        class="progreso">
+    </div>
+
+</div>
+
+<p id="textoProgreso">
+    0%
+</p>
+    <button id="sumarPuntos">
+    ♻️ Registrar Reciclaje
+</button>
+
+<hr>
+
+<h3>📱 Escanear QR</h3>
+
+<button id="abrirQR">
+    Escanear QR
+</button>
+
+<div id="reader"></div>
+
+<p id="resultadoQR"></p>
+
+    <hr>
+
+    <h3>🏅 Insignias</h3>
+
+    <div class="insignias">
+
+    <span id="ins1">🔒</span>
+
+    <span id="ins2">🔒</span>
+
+    <span id="ins3">🔒</span>
+
+</div>
+
+    <hr>
+
+    <h3>🎯 Retos Activos</h3>
+
+    <ul>
+
+        <li>
+            Reciclar 10 botellas (+20 pts)
+        </li>
+
+        <li>
+            Separar residuos 5 días (+15 pts)
+        </li>
+
+        <li>
+            Participar en campaña verde (+30 pts)
+        </li>
+
+    </ul>
+
+    <hr>
+
+    <h3>🏆 Ranking Carreras</h3>
+
+    <ol id="rankingCarreras">
+
+</ol>
+
+<div class="contenedorGrafica">
+
+    <canvas id="graficaReciclaje"></canvas>
+
+</div>
+
+<h3>🎁 Recompensas</h3>
+
+<div class="recompensas">
+
+    <button onclick="canjear(50)">
+        ☕ Cupón Cafetería (50 pts)
+    </button>
+
+    <button onclick="canjear(100)">
+        🌱 Árbol Virtual Especial (100 pts)
+    </button>
+
+    <button onclick="canjear(150)">
+        🏅 Insignia Dorada (150 pts)
+    </button>
+
+</div> 
+
+    <hr>
+
+    <button id="cerrarSesion">
+
+    🚪 Cerrar Sesión
+
+    </button>
+<div class="menuInferior">
+
+    <button>🏠</button>
+
+    <button>🏆</button>
+
+    <button>📷</button>
+
+    <button>🎁</button>
+
+    <button>👤</button>
+
+</div>
+    
+
+</section>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://unpkg.com/html5-qrcode"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
